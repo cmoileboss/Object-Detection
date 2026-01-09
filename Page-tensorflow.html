@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Prototype détection d’objets</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      width: 400px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 14px;
+      border: none;
+      border-radius: 4px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* STYLE DU CANVAS */
+    canvas {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      width: 100%;
+      height: auto;
+    }
+
+    #message {
+      margin-top: 15px;
+      color: #333;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Prototype de détection d’objets</h1>
+
+    <p>Entrez l’URL d’une image :</p>
+
+    <input 
+      type="text" 
+      id="imageUrl" 
+      placeholder="https://exemple.com/image.jpg"
+    >
+
+    <button onclick="lancerDetection()">Détecter les objets</button>
+
+    <!--CANVAS AJOUTÉ ICI -->
+    <canvas id="canvas"></canvas>
+
+    <p id="message"></p>
+    
+  </div>
+
+
+<script src="tensorflow.js"></script>
+</body>
+</html>
